@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+.attribution { font-size: 1rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root {
+    /* Primary */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    /* Neutral */
+
+    --Very-dark-blue1: hsl(217, 54%, 11%);
+    --Very-dark-blue2: hsl(216, 50%, 13%);
+    --Very-dark-blue3: hsl(215, 46%, 20%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Outfit";
+    color: var(--soft-blue);
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0px 20px;
+    background-color: var(--Very-dark-blue2);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    max-width: 360px;
+    background-color: var(--Very-dark-blue3);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 35px 0px 20px var(--Very-dark-blue1), 0 35px 0px 50px hsl(217, 48%, 14%);
+    margin-bottom: 100px;
+}
+
+/* Image */
+
+div.image-card {
+    position: relative;
+    border-radius: 10px;
+    transition: all 200ms;
+    cursor: pointer;
+}
+
+div.image-card:hover {
+    background-color: cyan;
+}
+
+.eye-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.image1 {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.image-card:hover .image1 {
+    opacity: 0.7;
+}
+
+.image-card:hover .eye-icon {
+    display: block;
+}
+
+
+
+h1 {
+    font-size: 1.25rem;
+    color: white;
+    cursor: pointer;
+}
+
+h1:hover {
+    color: var(--cyan);
+}
+
+p.text-style {
+    color: var(--cyan);
+    font-weight: bold;
+}
+
+p.text-style img {
+    margin-right: 5px;
+}
+
+div.details {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+img.avatar {
+    width: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+img {
+    vertical-align: middle;
+}
+
+span {
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+span:hover {
+    color: var(--cyan);
+}
